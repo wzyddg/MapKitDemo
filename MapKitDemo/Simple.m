@@ -1,13 +1,13 @@
 //
-//  wowo.m
+//  Simple.m
 //  MapKitDemo
 //
-//  Created by 王 泽宇 on 15/8/6.
+//  Created by wzy on 15/8/8.
 //  Copyright © 2015年 王 泽宇. All rights reserved.
 //
 
-#import "wowo.h"
+#import "Simple.h"
 
-@implementation wowo
+@implementation Simple
 
 @end
