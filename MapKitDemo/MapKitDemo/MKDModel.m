@@ -10,4 +10,8 @@
 
 @implementation MKDModel
 
++(void)loginWithUsername:(NSString*)username AndPassword:(NSString*)password{
+    
+}
+
 @end
