@@ -7,23 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55C204801B761CED005DDA6E /* MKDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C2047F1B761CED005DDA6E /* MKDModel.m */; };
 		55D1DB231B739E2D00BC8521 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D1DB221B739E2D00BC8521 /* main.m */; };
 		55D1DB261B739E2D00BC8521 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D1DB251B739E2D00BC8521 /* AppDelegate.m */; };
+		55D1DB291B739E2D00BC8521 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D1DB281B739E2D00BC8521 /* ViewController.m */; };
 		55D1DB2C1B739E2D00BC8521 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55D1DB2A1B739E2D00BC8521 /* Main.storyboard */; };
 		55D1DB2E1B739E2D00BC8521 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55D1DB2D1B739E2D00BC8521 /* Assets.xcassets */; };
-		55DA93B91B7AEF8A0059563A /* MKDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DA93B81B7AEF8A0059563A /* MKDModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55C2047E1B761CED005DDA6E /* MKDModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKDModel.h; path = MapKitDemo/MKDModel.h; sourceTree = "<group>"; };
+		55C2047F1B761CED005DDA6E /* MKDModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MKDModel.m; path = MapKitDemo/MKDModel.m; sourceTree = "<group>"; };
 		55D1DB1E1B739E2D00BC8521 /* MapKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D1DB221B739E2D00BC8521 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		55D1DB241B739E2D00BC8521 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		55D1DB251B739E2D00BC8521 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		55D1DB271B739E2D00BC8521 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		55D1DB281B739E2D00BC8521 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		55D1DB2B1B739E2D00BC8521 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55D1DB2D1B739E2D00BC8521 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55D1DB321B739E2D00BC8521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		55DA93B71B7AEF8A0059563A /* MKDModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKDModel.h; sourceTree = "<group>"; };
-		55DA93B81B7AEF8A0059563A /* MKDModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKDModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,9 +40,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55C204811B761CF4005DDA6E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				55C2047E1B761CED005DDA6E /* MKDModel.h */,
+				55C2047F1B761CED005DDA6E /* MKDModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		55D1DB151B739E2D00BC8521 = {
 			isa = PBXGroup;
 			children = (
+				55C204811B761CF4005DDA6E /* Model */,
 				55D1DB201B739E2D00BC8521 /* MapKitDemo */,
 				55D1DB1F1B739E2D00BC8521 /* Products */,
 			);
@@ -56,10 +69,10 @@
 		55D1DB201B739E2D00BC8521 /* MapKitDemo */ = {
 			isa = PBXGroup;
 			children = (
-				55DA93B71B7AEF8A0059563A /* MKDModel.h */,
-				55DA93B81B7AEF8A0059563A /* MKDModel.m */,
 				55D1DB241B739E2D00BC8521 /* AppDelegate.h */,
 				55D1DB251B739E2D00BC8521 /* AppDelegate.m */,
+				55D1DB271B739E2D00BC8521 /* ViewController.h */,
+				55D1DB281B739E2D00BC8521 /* ViewController.m */,
 				55D1DB2A1B739E2D00BC8521 /* Main.storyboard */,
 				55D1DB2D1B739E2D00BC8521 /* Assets.xcassets */,
 				55D1DB321B739E2D00BC8521 /* Info.plist */,
@@ -145,8 +158,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55DA93B91B7AEF8A0059563A /* MKDModel.m in Sources */,
+				55D1DB291B739E2D00BC8521 /* ViewController.m in Sources */,
 				55D1DB261B739E2D00BC8521 /* AppDelegate.m in Sources */,
+				55C204801B761CED005DDA6E /* MKDModel.m in Sources */,
 				55D1DB231B739E2D00BC8521 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

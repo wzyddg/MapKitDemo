@@ -2,7 +2,7 @@
 //  MKDModel.h
 //  MapKitDemo
 //
-//  Created by 王 泽宇 on 15/8/12.
+//  Created by wzy on 15/8/8.
 //  Copyright © 2015年 王 泽宇. All rights reserved.
 //
 
