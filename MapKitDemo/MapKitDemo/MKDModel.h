@@ -1,13 +1,13 @@
 //
-//  Simple.m
+//  MKDModel.h
 //  MapKitDemo
 //
 //  Created by wzy on 15/8/8.
 //  Copyright © 2015年 王 泽宇. All rights reserved.
 //
 
-#import "Simple.h"
+#import <Foundation/Foundation.h>
 
-@implementation Simple
+@interface MKDModel : NSObject
 
 @end
