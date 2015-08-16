@@ -22,6 +22,7 @@
     self.mapView.delegate = self;
     self.mapView.showsScale= NO;
     self.mapView.showsCompass= YES;
+    self.mapView.showTraffic = NO;
     self.mapView.showsUserLocation = YES;
     [self.mapView setUserTrackingMode: MAUserTrackingModeFollow animated:YES];
     
