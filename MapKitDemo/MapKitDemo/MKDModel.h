@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AMapNaviKit/AMapNaviKit.h>
 
 @protocol InfoDealDelegate <NSObject>
 -(void)dealInfo:(NSString*)info;
@@ -15,7 +16,7 @@
 @interface MKDModel : NSObject
 
 @property(nonatomic,weak) id<InfoDealDelegate> delegate;
--(void)initWithDelegate:(id<InfoDealDelegate>) delegate;
+-(id)initWithDelegate:(id<InfoDealDelegate>) delegate;
 -(void)loginWithUserName:(NSString*)userName andPassword:(NSString*)password;
-
+-(void)sendUserLocationWithUserID:(NSInteger)userID AndUserLocation:(MAUserLocation*)userLocation;
 @end
