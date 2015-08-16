@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		14E12E093D3037424280E220 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C36D79A7B9AF7ACF31B0693 /* libPods.a */; };
+		5564A1C61B7FFBC30001FDC2 /* MyPosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5564A1C51B7FFBC30001FDC2 /* MyPosViewController.m */; };
 		55C204801B761CED005DDA6E /* MKDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C2047F1B761CED005DDA6E /* MKDModel.m */; };
 		55D1DB231B739E2D00BC8521 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D1DB221B739E2D00BC8521 /* main.m */; };
 		55D1DB261B739E2D00BC8521 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D1DB251B739E2D00BC8521 /* AppDelegate.m */; };
@@ -17,6 +18,8 @@
 
 /* Begin PBXFileReference section */
 		1C36D79A7B9AF7ACF31B0693 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5564A1C41B7FFBC30001FDC2 /* MyPosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPosViewController.h; sourceTree = "<group>"; };
+		5564A1C51B7FFBC30001FDC2 /* MyPosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPosViewController.m; sourceTree = "<group>"; };
 		55C2047E1B761CED005DDA6E /* MKDModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKDModel.h; path = MapKitDemo/MKDModel.h; sourceTree = "<group>"; };
 		55C2047F1B761CED005DDA6E /* MKDModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MKDModel.m; path = MapKitDemo/MKDModel.m; sourceTree = "<group>"; };
 		55D1DB1E1B739E2D00BC8521 /* MapKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5564A1C31B7FFB920001FDC2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5564A1C41B7FFBC30001FDC2 /* MyPosViewController.h */,
+				5564A1C51B7FFBC30001FDC2 /* MyPosViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		55C204811B761CF4005DDA6E /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +66,7 @@
 		55D1DB151B739E2D00BC8521 = {
 			isa = PBXGroup;
 			children = (
+				5564A1C31B7FFB920001FDC2 /* Controller */,
 				55C204811B761CF4005DDA6E /* Model */,
 				55D1DB201B739E2D00BC8521 /* MapKitDemo */,
 				55D1DB1F1B739E2D00BC8521 /* Products */,
@@ -141,6 +154,7 @@
 				TargetAttributes = {
 					55D1DB1D1B739E2D00BC8521 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = TT934WMMM9;
 					};
 				};
 			};
@@ -215,6 +229,7 @@
 				55D1DB261B739E2D00BC8521 /* AppDelegate.m in Sources */,
 				55C204801B761CED005DDA6E /* MKDModel.m in Sources */,
 				55D1DB231B739E2D00BC8521 /* main.m in Sources */,
+				5564A1C61B7FFBC30001FDC2 /* MyPosViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,11 +332,14 @@
 			baseConfigurationReference = 71A75DC8E7D22F795644B255 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MapKitDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TJSSEWzy.MapKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -330,11 +348,14 @@
 			baseConfigurationReference = 7ADF5920A2530AC85C7FED86 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MapKitDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TJSSEWzy.MapKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

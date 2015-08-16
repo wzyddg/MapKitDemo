@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GXq-HK-uci">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
     </dependencies>
     <scenes>
@@ -23,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="1729" y="726"/>
         </scene>
-        <!--View Controller-->
+        <!--我的位置-->
         <scene sceneID="nVX-ET-uKK">
             <objects>
-                <viewController id="y2O-RW-t82" sceneMemberID="viewController">
+                <viewController id="y2O-RW-t82" customClass="MyPosViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mFp-nr-cKs"/>
                         <viewControllerLayoutGuide type="bottom" id="frO-U2-9mB"/>
@@ -34,9 +35,25 @@
                     <view key="view" contentMode="scaleToFill" id="rI2-VR-Tce">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhL-zq-hC3">
+                                <rect key="frame" x="255" y="508" width="90" height="30"/>
+                                <state key="normal" title="发送我的位置"/>
+                                <connections>
+                                    <action selector="sendPos:" destination="y2O-RW-t82" eventType="touchUpInside" id="nhD-dI-9CF"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="frO-U2-9mB" firstAttribute="top" secondItem="zhL-zq-hC3" secondAttribute="bottom" constant="13" id="5xU-Lz-oIX"/>
+                            <constraint firstItem="zhL-zq-hC3" firstAttribute="centerX" secondItem="rI2-VR-Tce" secondAttribute="centerX" id="nju-a8-P3v"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="DjZ-vE-cGr"/>
+                    <navigationItem key="navigationItem" title="我的位置" id="DjZ-vE-cGr"/>
+                    <connections>
+                        <outlet property="sendButton" destination="zhL-zq-hC3" id="Hxt-C6-6cF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ii-75-6oZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
