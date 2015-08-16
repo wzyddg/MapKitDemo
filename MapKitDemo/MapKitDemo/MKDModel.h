@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol InfoDealDelegate <NSObject>
+-(void)dealInfo:(NSString*)info;
+@end
+
 @interface MKDModel : NSObject
+
+@property(nonatomic,weak) id<InfoDealDelegate> delegate;
+-(void)initWithDelegate:(id<InfoDealDelegate>) delegate;
+-(void)loginWithUserName:(NSString*)userName andPassword:(NSString*)password;
 
 @end

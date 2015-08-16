@@ -45,6 +45,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5521D6841B8102F300BDB0D2 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
 		5564A1C31B7FFB920001FDC2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +73,7 @@
 		55D1DB151B739E2D00BC8521 = {
 			isa = PBXGroup;
 			children = (
+				5521D6841B8102F300BDB0D2 /* Protocol */,
 				5564A1C31B7FFB920001FDC2 /* Controller */,
 				55C204811B761CF4005DDA6E /* Model */,
 				55D1DB201B739E2D00BC8521 /* MapKitDemo */,

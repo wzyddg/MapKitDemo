@@ -7,12 +7,15 @@
 //
 
 #import "MyPosViewController.h"
+#import "MKDModel.h"
 
 @interface MyPosViewController ()
 
 @end
 
-@implementation MyPosViewController
+@implementation MyPosViewController{
+    MKDModel * mkdModel;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,6 +31,7 @@
     
     [self.view addSubview:self.mapView];
     [self.view addSubview:self.sendButton];
+    
     // Do any additional setup after loading the view.
 }
 
@@ -40,6 +44,9 @@
     NSLog(@"sendButton pressed");
 }
 
+-(void)dealInfo:(NSString *)info{
+    
+}
 /*
 #pragma mark - Navigation
 
