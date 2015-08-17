@@ -117,10 +117,10 @@
             </objects>
             <point key="canvasLocation" x="917" y="726"/>
         </scene>
-        <!--View Controller-->
+        <!--User Status View Controller-->
         <scene sceneID="x34-LA-JNQ">
             <objects>
-                <viewController id="Mxk-KR-8Tm" sceneMemberID="viewController">
+                <viewController id="Mxk-KR-8Tm" customClass="UserStatusViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tfc-6C-Mj5"/>
                         <viewControllerLayoutGuide type="bottom" id="lG4-Cr-1jX"/>
@@ -128,13 +128,80 @@
                     <view key="view" contentMode="scaleToFill" id="dGF-bl-rw9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text=":" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjl-Wv-hdC">
+                                <rect key="frame" x="285" y="137" width="30" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="1234567890987" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edb-gq-dCx">
+                                <rect key="frame" x="323" y="137" width="177" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="用户名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xiW-np-ell">
+                                <rect key="frame" x="209" y="137" width="51" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbW-89-N3j">
+                                <rect key="frame" x="220" y="371" width="30" height="30"/>
+                                <state key="normal" title="登录"/>
+                                <connections>
+                                    <action selector="goToLogin:" destination="Mxk-KR-8Tm" eventType="touchUpInside" id="xi5-8W-mly"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Tz-TU-Xaj">
+                                <rect key="frame" x="340" y="371" width="30" height="30"/>
+                                <state key="normal" title="注销"/>
+                                <connections>
+                                    <action selector="logout:" destination="Mxk-KR-8Tm" eventType="touchUpInside" id="S5W-TB-r72"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Tz-TU-Xaj" firstAttribute="top" secondItem="Edb-gq-dCx" secondAttribute="bottom" constant="200" id="18d-Sc-Lhu"/>
+                            <constraint firstItem="fjl-Wv-hdC" firstAttribute="leading" secondItem="xiW-np-ell" secondAttribute="trailing" constant="25" id="Qp2-8z-SVC"/>
+                            <constraint firstItem="jbW-89-N3j" firstAttribute="leading" secondItem="xiW-np-ell" secondAttribute="leading" id="S3z-X6-SB2"/>
+                            <constraint firstItem="jbW-89-N3j" firstAttribute="top" secondItem="xiW-np-ell" secondAttribute="bottom" constant="200" id="VpT-X3-GSt"/>
+                            <constraint firstItem="Edb-gq-dCx" firstAttribute="leading" secondItem="fjl-Wv-hdC" secondAttribute="trailing" constant="25" id="dYg-uD-sew"/>
+                            <constraint firstItem="fjl-Wv-hdC" firstAttribute="centerX" secondItem="dGF-bl-rw9" secondAttribute="centerX" id="pS8-cH-wH7"/>
+                            <constraint firstItem="6Tz-TU-Xaj" firstAttribute="leading" secondItem="Edb-gq-dCx" secondAttribute="leading" id="v9G-hN-iWe"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="K8e-o1-GDj"/>
+                    <connections>
+                        <outlet property="loginButton" destination="jbW-89-N3j" id="6KM-r5-bqa"/>
+                        <outlet property="logoutButton" destination="6Tz-TU-Xaj" id="qgd-Um-LGS"/>
+                        <outlet property="userNameLabel" destination="Edb-gq-dCx" id="Awz-1D-ETK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aOk-iv-hPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1729" y="1396"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="RrK-Ue-10b">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" id="lsq-ZN-Q9H" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="C9S-97-ACd"/>
+                        <viewControllerLayoutGuide type="bottom" id="1th-fR-uGZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Re-dX-Vuh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NCT-vP-RfF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xR8-mf-hbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2373" y="1396"/>
         </scene>
         <!--个人信息-->
         <scene sceneID="c2a-5t-JsV">

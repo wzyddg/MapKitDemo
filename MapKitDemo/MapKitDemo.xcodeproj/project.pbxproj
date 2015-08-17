@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		14E12E093D3037424280E220 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C36D79A7B9AF7ACF31B0693 /* libPods.a */; };
+		555EFE681B815971004755C8 /* UserStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 555EFE671B815971004755C8 /* UserStatusViewController.m */; };
+		555EFE6B1B815CB9004755C8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 555EFE6A1B815CB9004755C8 /* LoginViewController.m */; };
 		5564A1C61B7FFBC30001FDC2 /* MyPosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5564A1C51B7FFBC30001FDC2 /* MyPosViewController.m */; };
 		55C204801B761CED005DDA6E /* MKDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C2047F1B761CED005DDA6E /* MKDModel.m */; };
 		55D1DB231B739E2D00BC8521 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D1DB221B739E2D00BC8521 /* main.m */; };
@@ -18,6 +20,10 @@
 
 /* Begin PBXFileReference section */
 		1C36D79A7B9AF7ACF31B0693 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		555EFE661B815971004755C8 /* UserStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserStatusViewController.h; path = MapKitDemo/UserStatusViewController.h; sourceTree = "<group>"; };
+		555EFE671B815971004755C8 /* UserStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserStatusViewController.m; path = MapKitDemo/UserStatusViewController.m; sourceTree = "<group>"; };
+		555EFE691B815CB9004755C8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = MapKitDemo/LoginViewController.h; sourceTree = "<group>"; };
+		555EFE6A1B815CB9004755C8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = MapKitDemo/LoginViewController.m; sourceTree = "<group>"; };
 		5564A1C41B7FFBC30001FDC2 /* MyPosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPosViewController.h; sourceTree = "<group>"; };
 		5564A1C51B7FFBC30001FDC2 /* MyPosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPosViewController.m; sourceTree = "<group>"; };
 		55C2047E1B761CED005DDA6E /* MKDModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKDModel.h; path = MapKitDemo/MKDModel.h; sourceTree = "<group>"; };
@@ -57,6 +63,10 @@
 			children = (
 				5564A1C41B7FFBC30001FDC2 /* MyPosViewController.h */,
 				5564A1C51B7FFBC30001FDC2 /* MyPosViewController.m */,
+				555EFE661B815971004755C8 /* UserStatusViewController.h */,
+				555EFE671B815971004755C8 /* UserStatusViewController.m */,
+				555EFE691B815CB9004755C8 /* LoginViewController.h */,
+				555EFE6A1B815CB9004755C8 /* LoginViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -235,6 +245,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				55D1DB261B739E2D00BC8521 /* AppDelegate.m in Sources */,
+				555EFE681B815971004755C8 /* UserStatusViewController.m in Sources */,
+				555EFE6B1B815CB9004755C8 /* LoginViewController.m in Sources */,
 				55C204801B761CED005DDA6E /* MKDModel.m in Sources */,
 				55D1DB231B739E2D00BC8521 /* main.m in Sources */,
 				5564A1C61B7FFBC30001FDC2 /* MyPosViewController.m in Sources */,
