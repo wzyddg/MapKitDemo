@@ -74,8 +74,8 @@
 		55C204811B761CF4005DDA6E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				55C2047E1B761CED005DDA6E /* MKDModel.h */,
 				55C2047F1B761CED005DDA6E /* MKDModel.m */,
+				55C2047E1B761CED005DDA6E /* MKDModel.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";

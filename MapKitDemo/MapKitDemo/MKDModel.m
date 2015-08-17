@@ -10,7 +10,7 @@
 
 @implementation MKDModel
 
--(id)initWithDelegate:(id<InfoDealDelegate>)delegate{
+-(instancetype)initWithDelegate:(id<InfoDealDelegate>)delegate{
     if((self = [super init])){
         self.delegate=delegate;
     }
@@ -18,8 +18,12 @@
 }
 
 -(void)loginWithUserName:(NSString *)userName andPassword:(NSString *)password{
-    //return user's id
-    
+    //send something to the server with AsyncSocket and then call back
+    if ([userName isEqualToString:@"qwe"]&&[password isEqualToString:@"asd"]) {
+        [self.delegate dealInfo:@"qwe,123"];
+    }else{
+        [self.delegate dealInfo:@"null,0"];
+    }
 }
 
 -(void)sendUserLocationWithUserID:(NSInteger)userID AndUserLocation:(MAUserLocation*)userLocation{

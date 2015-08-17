@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -135,7 +136,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="1234567890987" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edb-gq-dCx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="未登录" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edb-gq-dCx">
                                 <rect key="frame" x="323" y="137" width="177" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -192,12 +193,65 @@
                         <viewControllerLayoutGuide type="top" id="C9S-97-ACd"/>
                         <viewControllerLayoutGuide type="bottom" id="1th-fR-uGZ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6Re-dX-Vuh">
+                    <view key="view" contentMode="scaleToFill" id="6Re-dX-Vuh" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="用户名：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lby-IC-fHP">
+                                <rect key="frame" x="78" y="82" width="68" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="密    码：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0J-4s-HXK">
+                                <rect key="frame" x="78" y="159" width="69" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入用户名" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="txc-v9-hSV">
+                                <rect key="frame" x="179" y="78" width="200" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tvN-ue-HZE">
+                                <rect key="frame" x="186" y="155" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0VX-ol-XXG">
+                                <rect key="frame" x="186" y="264" width="30" height="30"/>
+                                <state key="normal" title="登录"/>
+                                <connections>
+                                    <action selector="login:" destination="lsq-ZN-Q9H" eventType="touchUpInside" id="0pS-pj-b6L"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lby-IC-fHP" firstAttribute="leading" secondItem="6Re-dX-Vuh" secondAttribute="leadingMargin" constant="45" id="16I-kb-XYr"/>
+                            <constraint firstItem="txc-v9-hSV" firstAttribute="centerY" secondItem="lby-IC-fHP" secondAttribute="centerY" id="CNf-eu-XMX"/>
+                            <constraint firstItem="J0J-4s-HXK" firstAttribute="top" secondItem="lby-IC-fHP" secondAttribute="bottom" constant="45" id="I9p-o6-lZ3"/>
+                            <constraint firstItem="0VX-ol-XXG" firstAttribute="top" secondItem="tvN-ue-HZE" secondAttribute="bottom" constant="45" id="JWO-Tf-SSb"/>
+                            <constraint firstItem="0VX-ol-XXG" firstAttribute="leading" secondItem="tvN-ue-HZE" secondAttribute="leading" id="M3r-o2-jMn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tvN-ue-HZE" secondAttribute="trailing" constant="45" id="XiQ-4r-Q4q"/>
+                            <constraint firstItem="tvN-ue-HZE" firstAttribute="centerY" secondItem="J0J-4s-HXK" secondAttribute="centerY" id="YR0-Li-EhH"/>
+                            <constraint firstItem="lby-IC-fHP" firstAttribute="top" secondItem="C9S-97-ACd" secondAttribute="bottom" constant="45" id="eq8-Er-che"/>
+                            <constraint firstItem="txc-v9-hSV" firstAttribute="leading" secondItem="lby-IC-fHP" secondAttribute="trailing" constant="20" id="iYE-hO-xEd"/>
+                            <constraint firstItem="J0J-4s-HXK" firstAttribute="leading" secondItem="lby-IC-fHP" secondAttribute="leading" id="mat-vk-qMc"/>
+                            <constraint firstItem="tvN-ue-HZE" firstAttribute="leading" secondItem="txc-v9-hSV" secondAttribute="leading" id="oVU-Aj-Lvu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="txc-v9-hSV" secondAttribute="trailing" constant="45" id="xxU-pX-iS7"/>
+                        </constraints>
+                        <connections>
+                            <action selector="backgroundTap:" destination="lsq-ZN-Q9H" eventType="touchDown" id="Fx1-Iu-XlT"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="NCT-vP-RfF"/>
+                    <connections>
+                        <outlet property="loginButton" destination="0VX-ol-XXG" id="Mc2-mo-Q8X"/>
+                        <outlet property="passwordField" destination="tvN-ue-HZE" id="BpE-wT-cfq"/>
+                        <outlet property="userNameField" destination="txc-v9-hSV" id="sne-XN-yoR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xR8-mf-hbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

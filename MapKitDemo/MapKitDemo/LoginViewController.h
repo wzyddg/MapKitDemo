@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MKDModel.h"
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : UIViewController<InfoDealDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *userNameField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordField;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (nonatomic,weak) UIButton* preLoginButton;
+@property (nonatomic,weak) UIButton* preLogoutButton;
+@property (nonatomic,weak) UILabel* preUserNameLabel;
+
+- (IBAction)backgroundTap:(UIControl *)sender;
 
 @end

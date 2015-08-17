@@ -16,7 +16,9 @@
 @interface MKDModel : NSObject
 
 @property(nonatomic,weak) id<InfoDealDelegate> delegate;
--(id)initWithDelegate:(id<InfoDealDelegate>) delegate;
+-(instancetype)initWithDelegate:(id<InfoDealDelegate>) delegate;
 -(void)loginWithUserName:(NSString*)userName andPassword:(NSString*)password;
 -(void)sendUserLocationWithUserID:(NSInteger)userID AndUserLocation:(MAUserLocation*)userLocation;
+
+
 @end
