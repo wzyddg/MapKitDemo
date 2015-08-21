@@ -31,4 +31,9 @@
     [self.delegate dealInfo:@"sendOK"];//this should be done in a call back
 }
 
+-(void)getUserLocationWithUserName:(NSString *)userName{
+    //talk to the server
+    //man's longitude,man's latitude,garage's longitude,garage's latitude
+    [self.delegate dealInfo:@"109.834075,40.68413,109.83348,40.683358"];
+}
 @end

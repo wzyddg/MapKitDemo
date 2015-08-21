@@ -16,6 +16,7 @@
 		55D1DB261B739E2D00BC8521 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D1DB251B739E2D00BC8521 /* AppDelegate.m */; };
 		55D1DB2C1B739E2D00BC8521 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55D1DB2A1B739E2D00BC8521 /* Main.storyboard */; };
 		55D1DB2E1B739E2D00BC8521 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55D1DB2D1B739E2D00BC8521 /* Assets.xcassets */; };
+		876469F61B8665FB00B95A06 /* ContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 876469F51B8665FB00B95A06 /* ContactTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		55D1DB321B739E2D00BC8521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71A75DC8E7D22F795644B255 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7ADF5920A2530AC85C7FED86 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		876469F41B8665FB00B95A06 /* ContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactTableViewController.h; path = MapKitDemo/ContactTableViewController.h; sourceTree = "<group>"; };
+		876469F51B8665FB00B95A06 /* ContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactTableViewController.m; path = MapKitDemo/ContactTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				555EFE671B815971004755C8 /* UserStatusViewController.m */,
 				555EFE691B815CB9004755C8 /* LoginViewController.h */,
 				555EFE6A1B815CB9004755C8 /* LoginViewController.m */,
+				876469F41B8665FB00B95A06 /* ContactTableViewController.h */,
+				876469F51B8665FB00B95A06 /* ContactTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -83,6 +88,7 @@
 		55D1DB151B739E2D00BC8521 = {
 			isa = PBXGroup;
 			children = (
+				876469F71B8669F600B95A06 /* View */,
 				5521D6841B8102F300BDB0D2 /* Protocol */,
 				5564A1C31B7FFB920001FDC2 /* Controller */,
 				55C204811B761CF4005DDA6E /* Model */,
@@ -120,6 +126,13 @@
 				55D1DB221B739E2D00BC8521 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		876469F71B8669F600B95A06 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		8D0F16606B91D5ADE46570E8 /* Pods */ = {
@@ -245,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55D1DB261B739E2D00BC8521 /* AppDelegate.m in Sources */,
+				876469F61B8665FB00B95A06 /* ContactTableViewController.m in Sources */,
 				555EFE681B815971004755C8 /* UserStatusViewController.m in Sources */,
 				555EFE6B1B815CB9004755C8 /* LoginViewController.m in Sources */,
 				55C204801B761CED005DDA6E /* MKDModel.m in Sources */,
