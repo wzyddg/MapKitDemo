@@ -7,6 +7,7 @@
 //
 
 #import "MyPosViewController.h"
+
 #import "MKDModel.h"
 
 @interface MyPosViewController ()
@@ -21,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     CGRect innerSize=CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-    [MAMapServices sharedServices].apiKey =@"4c3ea31ceed40f9da1e2362e74b12346";
+    [MAMapServices sharedServices].apiKey = APIKey;
     self.mapView=[[MAMapView alloc] initWithFrame:innerSize];
     self.mapView.delegate = self;
     self.mapView.showsScale= NO;

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AMapNaviKit/AMapNaviKit.h>
 #import "MKDModel.h"
-
+#import "APIKey.h"
 @interface MyPosViewController : UIViewController<MAMapViewDelegate,InfoDealDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *sendButton;
