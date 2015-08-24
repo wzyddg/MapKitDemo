@@ -10,7 +10,8 @@
 
 @implementation ChooseWayViewController{
     AMapNaviPoint *_endPoint;
-    
+    NSInteger naviType;
+    //0 for drive , 1 for walk
     MAUserLocation *_userLocation;
 }
 
@@ -21,9 +22,15 @@
 //    naviVC.destLocation=self.destLocation;
 //    naviVC.garageLocation=self.garageLocation;
     if([((UIButton*)sender).titleLabel.text isEqualToString:@"步行导航"]){
-//        naviVC.naviType=0;
+        naviType=1;
+        _endPoint.latitude=self.destLocation.coordinate.latitude;
+        _endPoint.longitude=self.destLocation.coordinate.longitude;
+        [self.naviManager calculateWalkRouteWithEndPoints:@[_endPoint]];
     }else{
-//        naviVC.naviType=1;
+        naviType=0;
+        _endPoint.latitude=self.garageLocation.coordinate.latitude;
+        _endPoint.longitude=self.garageLocation.coordinate.longitude;
+        [self.naviManager calculateDriveRouteWithEndPoints:@[_endPoint] wayPoints:nil drivingStrategy:0];
     }
 //    [self.navigationController pushViewController:naviVC animated:YES];
 }
@@ -31,10 +38,11 @@
 #pragma mark - Life Circle
 -(void)viewDidLoad{
     [super viewDidLoad];
+    naviType=0;
     [self initMapView];
     [self initNaviManager];
     [self initNaviViewController];
-    
+    _endPoint = [[AMapNaviPoint alloc]init];
 }
 
 #pragma mark - Initalization
@@ -63,11 +71,11 @@
     CGRect innerSize=CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     _mapView=[[MAMapView alloc] initWithFrame:innerSize];
     self.mapView.delegate = self;
-    self.mapView.showsScale= YES;
-    self.mapView.showsCompass= YES;
-    self.mapView.showTraffic = YES;
-    self.mapView.showsUserLocation = YES;
-    [self.mapView setUserTrackingMode: MAUserTrackingModeFollow animated:YES];
+//    self.mapView.showsScale= NO;
+//    self.mapView.showsCompass= NO;
+//    self.mapView.showTraffic = YES;
+//    self.mapView.showsUserLocation = NO;
+//    [self.mapView setUserTrackingMode: MAUserTrackingModeFollow animated:YES];
 }
 
 #pragma mark - MapView Delegate
@@ -77,6 +85,7 @@
     if (updatingLocation)
     {
         _userLocation = userLocation;
+        NSLog(@"%f %f",userLocation.location.coordinate.latitude,userLocation.location.coordinate.longitude);
     }
 }
 
@@ -92,11 +101,13 @@
     NSLog(@"didPresentNaviViewController");
     
     [self.naviManager startGPSNavi];
+//    [self.naviManager startEmulatorNavi];
 }
 
 - (void)naviManager:(AMapNaviManager *)naviManager didDismissNaviViewController:(UIViewController *)naviViewController
 {
     NSLog(@"didDismissNaviViewController");
+    
 }
 
 - (void)naviManagerOnCalculateRouteSuccess:(AMapNaviManager *)naviManager
@@ -126,15 +137,21 @@
     NSLog(@"didStartNavi");
 }
 
+//emu navi over
 - (void)naviManagerDidEndEmulatorNavi:(AMapNaviManager *)naviManager
 {
     NSLog(@"DidEndEmulatorNavi");
     [self.naviManager dismissNaviViewControllerAnimated:YES];
 }
 
+//real navi over
 - (void)naviManagerOnArrivedDestination:(AMapNaviManager *)naviManager
 {
     NSLog(@"到啦哈哈哈");
+    [self.naviManager dismissNaviViewControllerAnimated:YES];
+    if(naviType==0){
+        [[NSUserDefaults standardUserDefaults] setObject:self.garageLocation forKey:@"MKDUserCarLocation"];
+    }
 }
 
 - (void)naviManager:(AMapNaviManager *)naviManager onArrivedWayPoint:(int)wayPointIndex

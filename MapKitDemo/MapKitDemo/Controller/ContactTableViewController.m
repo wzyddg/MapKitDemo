@@ -9,9 +9,11 @@
 #import "ContactTableViewController.h"
 #import "ChooseWayViewController.h"
 
-@interface ContactTableViewController (){
+@interface ContactTableViewController ()<UIAlertViewDelegate>{
     NSMutableArray * dataArray;
     MKDModel * mkdModel;
+    NSNumber* userID ;
+    NSNumber* prevUserID;
 }
 
 @end
@@ -21,23 +23,46 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self initData];
-    
-    mkdModel = [[MKDModel alloc]initWithDelegate:self];
+    mkdModel = [[MKDModel alloc] initWithDelegate:self];
+    mkdModel.listDelegate=self;
     self.tableView.dataSource=self;
     self.tableView.delegate=self;
+    dataArray = [[NSMutableArray alloc]init];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
-    
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
--(void)initData{
-    dataArray = [[NSMutableArray alloc]init];
-    [dataArray addObject:@"zth"];
-    [dataArray addObject:@"gyq"];
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    prevUserID=userID;
+    userID = [[NSUserDefaults standardUserDefaults] objectForKey:@"MKDUserID"];
+    if(prevUserID==userID||[prevUserID isEqualToNumber:userID]){
+        return;
+    }
+    if(userID==nil){
+        dataArray = [[NSMutableArray alloc]init];
+        [self.tableView reloadData];
+        UIAlertView* uiav = [[UIAlertView alloc]initWithTitle:@"请登录" message:@"您尚未登录，请登陆后使用本产品。" delegate:self cancelButtonTitle:@"去登陆" otherButtonTitles:nil];
+        [uiav show];
+    }else{
+        [mkdModel getFriendListWithUserID:userID.intValue];
+    }
 }
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    dataArray = [[NSMutableArray alloc]init];
+    [self.tableView reloadData];
+    [self.tabBarController setSelectedIndex:3];
+}
+
+//-(void)addData{
+//    NSLog(@"add data");
+//    [dataArray addObject:@"zth"];
+//    [dataArray addObject:@"gyq"];
+//    [self.tableView reloadData];
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -87,6 +112,14 @@
     [self.navigationController pushViewController:chooseWay animated:YES];
 }
 
+-(void)getList:(NSString *)info{
+    dataArray = [[NSMutableArray alloc]init];
+    NSArray * strings = [info componentsSeparatedByString:@","];
+    for (NSString* tmp in strings) {
+        [dataArray addObject:tmp];
+    }
+    [self.tableView reloadData];
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -13,12 +13,18 @@
 -(void)dealInfo:(NSString*)info;
 @end
 
+@protocol GetListDelegate <NSObject>
+-(void)getList:(NSString*)info;
+@end
+
 @interface MKDModel : NSObject
 
 @property(nonatomic,weak) id<InfoDealDelegate> delegate;
+@property(nonatomic,weak) id<GetListDelegate> listDelegate;
+
 -(instancetype)initWithDelegate:(id<InfoDealDelegate>) delegate;
 -(void)loginWithUserName:(NSString*)userName andPassword:(NSString*)password;
 -(void)sendUserLocationWithUserID:(NSInteger)userID AndUserLocation:(CLLocation*)userLocation;
 -(void)getUserLocationWithUserName:(NSString*)userName;
-
+-(void)getFriendListWithUserID:(NSInteger)userID;
 @end

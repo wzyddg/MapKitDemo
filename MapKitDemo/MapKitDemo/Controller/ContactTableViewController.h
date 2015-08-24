@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "MKDModel.h"
 
-@interface ContactTableViewController : UITableViewController<UITableViewDataSource,InfoDealDelegate>
+@interface ContactTableViewController : UITableViewController<UITableViewDataSource,InfoDealDelegate,GetListDelegate>
 
 @end

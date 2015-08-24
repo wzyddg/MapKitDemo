@@ -34,6 +34,12 @@
 -(void)getUserLocationWithUserName:(NSString *)userName{
     //talk to the server
     //man's longitude,man's latitude,garage's longitude,garage's latitude
+//    [self.delegate dealInfo:@"120.834075,50.68413,120.83348,50.683358"];
     [self.delegate dealInfo:@"109.834075,40.68413,109.83348,40.683358"];
+    //50 should be 40   120 should be 109
+}
+
+-(void)getFriendListWithUserID:(NSInteger)userID{
+    [self.listDelegate getList:@"gyq,zth"];
 }
 @end
