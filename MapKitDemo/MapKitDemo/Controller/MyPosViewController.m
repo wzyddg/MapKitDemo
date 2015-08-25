@@ -22,7 +22,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     CGRect innerSize=CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-    [MAMapServices sharedServices].apiKey = APIKey;
     self.mapView=[[MAMapView alloc] initWithFrame:innerSize];
     self.mapView.delegate = self;
     self.mapView.showsScale= NO;

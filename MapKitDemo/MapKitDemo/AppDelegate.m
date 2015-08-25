@@ -17,8 +17,15 @@
 
 @implementation AppDelegate
 
+- (void)configureAPIKey
+{
+    [AMapNaviServices sharedServices].apiKey = (NSString *)APIKey;
+    [MAMapServices sharedServices].apiKey = (NSString *)APIKey;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self configureAPIKey];
     return YES;
 }
 

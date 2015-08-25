@@ -296,46 +296,6 @@
             </objects>
             <point key="canvasLocation" x="2373" y="732"/>
         </scene>
-        <!--Navi View Controller-->
-        <scene sceneID="PFb-eI-8t6">
-            <objects>
-                <viewController storyboardIdentifier="NaviVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wII-32-PFK" customClass="NaviViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Uwd-bg-rgY"/>
-                        <viewControllerLayoutGuide type="bottom" id="KBi-ke-SRT"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0aI-MK-F3f">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXW-rq-pH8">
-                                <rect key="frame" x="51" y="44" width="31" height="30"/>
-                                <state key="normal" title="dest"/>
-                                <connections>
-                                    <action selector="d:" destination="wII-32-PFK" eventType="touchUpInside" id="Ag9-ub-Pjv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3o-yM-VMy">
-                                <rect key="frame" x="51" y="101" width="48" height="30"/>
-                                <state key="normal" title="garage"/>
-                                <connections>
-                                    <action selector="g:" destination="wII-32-PFK" eventType="touchUpInside" id="zAs-Gm-rbZ"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="LXW-rq-pH8" firstAttribute="top" secondItem="Uwd-bg-rgY" secondAttribute="bottom" constant="30" id="BHS-Vy-vIw"/>
-                            <constraint firstItem="e3o-yM-VMy" firstAttribute="top" secondItem="LXW-rq-pH8" secondAttribute="bottom" constant="30" id="J65-ft-Yui"/>
-                            <constraint firstItem="e3o-yM-VMy" firstAttribute="leading" secondItem="LXW-rq-pH8" secondAttribute="leading" id="la1-uJ-8OV"/>
-                            <constraint firstItem="LXW-rq-pH8" firstAttribute="leading" secondItem="0aI-MK-F3f" secondAttribute="leadingMargin" constant="30" id="z1w-Hx-hJ5"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Khh-N1-EA4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3018" y="732"/>
-        </scene>
         <!--好友位置-->
         <scene sceneID="Ydy-mU-VxH">
             <objects>

@@ -74,7 +74,6 @@
 -(void)dealInfo:(NSString *)info{
     //man's longitude,man's latitude,garage's longitude,garage's latitude
     NSLog(info);
-    NSLog(@"go to navi in ctvc");
     NSArray* locations = [info componentsSeparatedByString:@","];
     
     CLLocation* dest= [[CLLocation alloc] initWithLatitude:[[locations objectAtIndex:1] floatValue] longitude:[[locations objectAtIndex:0] floatValue]];

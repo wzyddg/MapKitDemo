@@ -7,14 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AMapNaviKit/MAMapKit.h>
-#import "NaviViewController.h"
 
-@interface ChooseWayViewController : UIViewController
+#import <AMapNaviKit/MAMapKit.h>
+#import <AMapNaviKit/AMapNaviKit.h>
+#import <AMapSearchKit/AMapSearchAPI.h>
+
+#import "APIKey.h"
+
+@interface ChooseWayViewController : UIViewController<MAMapViewDelegate,AMapNaviManagerDelegate,AMapNaviViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *byCar;
 @property (weak, nonatomic) IBOutlet UIButton *onFoot;
 
 @property (nonatomic,strong) CLLocation* garageLocation;
 @property (nonatomic,strong) CLLocation* destLocation;
+
+@property (nonatomic, strong) AMapNaviManager *naviManager;
+@property (nonatomic, strong) MAMapView *mapView;
+@property (nonatomic, strong) AMapNaviViewController *naviViewController;
 
 @end
