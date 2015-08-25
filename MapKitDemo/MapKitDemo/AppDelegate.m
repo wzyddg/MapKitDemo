@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "APIKey.h"
 
+#import <AMapNaviKit/AMapNaviKit.h>
+
 @interface AppDelegate ()
 
 @end

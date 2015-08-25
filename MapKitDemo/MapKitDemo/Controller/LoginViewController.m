@@ -14,9 +14,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIBarButtonItem* uibbi = [[UIBarButtonItem alloc]initWithTitle:@"<返回" style:UIBarButtonItemStyleDone target:self action:@selector(goBack)];
+//    UIBarButtonItem* uibbi = [[UIBarButtonItem alloc]initWithTitle:@"<返回" style:UIBarButtonItemStyleDone target:self action:@selector(goBack)];
     _mkdmodel = [[MKDModel alloc]initWithDelegate:self];
-    self.navigationItem.leftBarButtonItem=uibbi;
+//    self.navigationItem.leftBarButtonItem=uibbi;
     self.navigationItem.title=@"登录";
     self.passwordField.secureTextEntry=YES;
     // Do any additional setup after loading the view.

@@ -16,7 +16,7 @@
 
 @implementation MyPosViewController{
     MKDModel * _mkdModel;
-    MAUserLocation * location;
+    CLLocation * location;
 }
 
 - (void)viewDidLoad {
@@ -76,7 +76,7 @@
 }
 
 -(void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation updatingLocation:(BOOL)updatingLocation{
-    location=userLocation;
+    location=userLocation.location;
 }
 /*
 #pragma mark - Navigation

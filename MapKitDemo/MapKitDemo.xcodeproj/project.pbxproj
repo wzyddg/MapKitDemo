@@ -8,27 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		14E12E093D3037424280E220 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C36D79A7B9AF7ACF31B0693 /* libPods.a */; };
-		555EFE681B815971004755C8 /* UserStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 555EFE671B815971004755C8 /* UserStatusViewController.m */; };
-		555EFE6B1B815CB9004755C8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 555EFE6A1B815CB9004755C8 /* LoginViewController.m */; };
-		5564A1C61B7FFBC30001FDC2 /* MyPosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5564A1C51B7FFBC30001FDC2 /* MyPosViewController.m */; };
-		55C204801B761CED005DDA6E /* MKDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C2047F1B761CED005DDA6E /* MKDModel.m */; };
 		55D1DB231B739E2D00BC8521 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D1DB221B739E2D00BC8521 /* main.m */; };
 		55D1DB261B739E2D00BC8521 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D1DB251B739E2D00BC8521 /* AppDelegate.m */; };
 		55D1DB2C1B739E2D00BC8521 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55D1DB2A1B739E2D00BC8521 /* Main.storyboard */; };
 		55D1DB2E1B739E2D00BC8521 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55D1DB2D1B739E2D00BC8521 /* Assets.xcassets */; };
-		876469F61B8665FB00B95A06 /* ContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 876469F51B8665FB00B95A06 /* ContactTableViewController.m */; };
+		8786AB431B8BF3B10002FE64 /* NaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8786AB421B8BF3B10002FE64 /* NaviViewController.m */; };
+		8786AB4E1B8BF4180002FE64 /* ChooseWayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8786AB451B8BF4180002FE64 /* ChooseWayViewController.m */; };
+		8786AB4F1B8BF4180002FE64 /* ContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8786AB471B8BF4180002FE64 /* ContactTableViewController.m */; };
+		8786AB501B8BF4180002FE64 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8786AB491B8BF4180002FE64 /* LoginViewController.m */; };
+		8786AB511B8BF4180002FE64 /* MyPosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8786AB4B1B8BF4180002FE64 /* MyPosViewController.m */; };
+		8786AB521B8BF4180002FE64 /* UserStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8786AB4D1B8BF4180002FE64 /* UserStatusViewController.m */; };
+		8786AB551B8BF4580002FE64 /* MKDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8786AB541B8BF4580002FE64 /* MKDModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1C36D79A7B9AF7ACF31B0693 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		555EFE661B815971004755C8 /* UserStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserStatusViewController.h; path = MapKitDemo/UserStatusViewController.h; sourceTree = "<group>"; };
-		555EFE671B815971004755C8 /* UserStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserStatusViewController.m; path = MapKitDemo/UserStatusViewController.m; sourceTree = "<group>"; };
-		555EFE691B815CB9004755C8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = MapKitDemo/LoginViewController.h; sourceTree = "<group>"; };
-		555EFE6A1B815CB9004755C8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = MapKitDemo/LoginViewController.m; sourceTree = "<group>"; };
-		5564A1C41B7FFBC30001FDC2 /* MyPosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPosViewController.h; sourceTree = "<group>"; };
-		5564A1C51B7FFBC30001FDC2 /* MyPosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPosViewController.m; sourceTree = "<group>"; };
-		55C2047E1B761CED005DDA6E /* MKDModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKDModel.h; path = MapKitDemo/MKDModel.h; sourceTree = "<group>"; };
-		55C2047F1B761CED005DDA6E /* MKDModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MKDModel.m; path = MapKitDemo/MKDModel.m; sourceTree = "<group>"; };
 		55D1DB1E1B739E2D00BC8521 /* MapKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D1DB221B739E2D00BC8521 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		55D1DB241B739E2D00BC8521 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -38,8 +32,20 @@
 		55D1DB321B739E2D00BC8521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71A75DC8E7D22F795644B255 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7ADF5920A2530AC85C7FED86 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		876469F41B8665FB00B95A06 /* ContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactTableViewController.h; path = MapKitDemo/ContactTableViewController.h; sourceTree = "<group>"; };
-		876469F51B8665FB00B95A06 /* ContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactTableViewController.m; path = MapKitDemo/ContactTableViewController.m; sourceTree = "<group>"; };
+		8786AB411B8BF3B10002FE64 /* NaviViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NaviViewController.h; path = MapKitDemo/Controller/NaviViewController.h; sourceTree = "<group>"; };
+		8786AB421B8BF3B10002FE64 /* NaviViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NaviViewController.m; path = MapKitDemo/Controller/NaviViewController.m; sourceTree = "<group>"; };
+		8786AB441B8BF4180002FE64 /* ChooseWayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooseWayViewController.h; path = MapKitDemo/Controller/ChooseWayViewController.h; sourceTree = "<group>"; };
+		8786AB451B8BF4180002FE64 /* ChooseWayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooseWayViewController.m; path = MapKitDemo/Controller/ChooseWayViewController.m; sourceTree = "<group>"; };
+		8786AB461B8BF4180002FE64 /* ContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactTableViewController.h; path = MapKitDemo/Controller/ContactTableViewController.h; sourceTree = "<group>"; };
+		8786AB471B8BF4180002FE64 /* ContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactTableViewController.m; path = MapKitDemo/Controller/ContactTableViewController.m; sourceTree = "<group>"; };
+		8786AB481B8BF4180002FE64 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = MapKitDemo/Controller/LoginViewController.h; sourceTree = "<group>"; };
+		8786AB491B8BF4180002FE64 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = MapKitDemo/Controller/LoginViewController.m; sourceTree = "<group>"; };
+		8786AB4A1B8BF4180002FE64 /* MyPosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyPosViewController.h; path = MapKitDemo/Controller/MyPosViewController.h; sourceTree = "<group>"; };
+		8786AB4B1B8BF4180002FE64 /* MyPosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyPosViewController.m; path = MapKitDemo/Controller/MyPosViewController.m; sourceTree = "<group>"; };
+		8786AB4C1B8BF4180002FE64 /* UserStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserStatusViewController.h; path = MapKitDemo/Controller/UserStatusViewController.h; sourceTree = "<group>"; };
+		8786AB4D1B8BF4180002FE64 /* UserStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserStatusViewController.m; path = MapKitDemo/Controller/UserStatusViewController.m; sourceTree = "<group>"; };
+		8786AB531B8BF4580002FE64 /* MKDModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKDModel.h; path = MapKitDemo/Model/MKDModel.h; sourceTree = "<group>"; };
+		8786AB541B8BF4580002FE64 /* MKDModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MKDModel.m; path = MapKitDemo/Model/MKDModel.m; sourceTree = "<group>"; };
 		87E463FC1B879CF7005FB07B /* APIKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIKey.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,14 +71,18 @@
 		5564A1C31B7FFB920001FDC2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				5564A1C41B7FFBC30001FDC2 /* MyPosViewController.h */,
-				5564A1C51B7FFBC30001FDC2 /* MyPosViewController.m */,
-				555EFE661B815971004755C8 /* UserStatusViewController.h */,
-				555EFE671B815971004755C8 /* UserStatusViewController.m */,
-				555EFE691B815CB9004755C8 /* LoginViewController.h */,
-				555EFE6A1B815CB9004755C8 /* LoginViewController.m */,
-				876469F41B8665FB00B95A06 /* ContactTableViewController.h */,
-				876469F51B8665FB00B95A06 /* ContactTableViewController.m */,
+				8786AB441B8BF4180002FE64 /* ChooseWayViewController.h */,
+				8786AB451B8BF4180002FE64 /* ChooseWayViewController.m */,
+				8786AB461B8BF4180002FE64 /* ContactTableViewController.h */,
+				8786AB471B8BF4180002FE64 /* ContactTableViewController.m */,
+				8786AB481B8BF4180002FE64 /* LoginViewController.h */,
+				8786AB491B8BF4180002FE64 /* LoginViewController.m */,
+				8786AB4A1B8BF4180002FE64 /* MyPosViewController.h */,
+				8786AB4B1B8BF4180002FE64 /* MyPosViewController.m */,
+				8786AB4C1B8BF4180002FE64 /* UserStatusViewController.h */,
+				8786AB4D1B8BF4180002FE64 /* UserStatusViewController.m */,
+				8786AB411B8BF3B10002FE64 /* NaviViewController.h */,
+				8786AB421B8BF3B10002FE64 /* NaviViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -80,8 +90,8 @@
 		55C204811B761CF4005DDA6E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				55C2047F1B761CED005DDA6E /* MKDModel.m */,
-				55C2047E1B761CED005DDA6E /* MKDModel.h */,
+				8786AB531B8BF4580002FE64 /* MKDModel.h */,
+				8786AB541B8BF4580002FE64 /* MKDModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -260,12 +270,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				55D1DB261B739E2D00BC8521 /* AppDelegate.m in Sources */,
-				876469F61B8665FB00B95A06 /* ContactTableViewController.m in Sources */,
-				555EFE681B815971004755C8 /* UserStatusViewController.m in Sources */,
-				555EFE6B1B815CB9004755C8 /* LoginViewController.m in Sources */,
-				55C204801B761CED005DDA6E /* MKDModel.m in Sources */,
 				55D1DB231B739E2D00BC8521 /* main.m in Sources */,
-				5564A1C61B7FFBC30001FDC2 /* MyPosViewController.m in Sources */,
+				8786AB4E1B8BF4180002FE64 /* ChooseWayViewController.m in Sources */,
+				8786AB551B8BF4580002FE64 /* MKDModel.m in Sources */,
+				8786AB521B8BF4180002FE64 /* UserStatusViewController.m in Sources */,
+				8786AB501B8BF4180002FE64 /* LoginViewController.m in Sources */,
+				8786AB4F1B8BF4180002FE64 /* ContactTableViewController.m in Sources */,
+				8786AB431B8BF3B10002FE64 /* NaviViewController.m in Sources */,
+				8786AB511B8BF4180002FE64 /* MyPosViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,7 +388,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = MapKitDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TJSSEWzy.MapKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -398,7 +410,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = MapKitDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TJSSEWzy.MapKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

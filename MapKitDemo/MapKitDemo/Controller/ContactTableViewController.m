@@ -7,6 +7,7 @@
 //
 
 #import "ContactTableViewController.h"
+#import "ChooseWayViewController.h"
 
 @interface ContactTableViewController (){
     NSMutableArray * dataArray;
@@ -73,7 +74,18 @@
 -(void)dealInfo:(NSString *)info{
     //man's longitude,man's latitude,garage's longitude,garage's latitude
     NSLog(info);
+    NSLog(@"go to navi in ctvc");
+    NSArray* locations = [info componentsSeparatedByString:@","];
+    
+    CLLocation* dest= [[CLLocation alloc] initWithLatitude:[[locations objectAtIndex:1] floatValue] longitude:[[locations objectAtIndex:0] floatValue]];
+    CLLocation* garage= [[CLLocation alloc] initWithLatitude:[[locations objectAtIndex:3] floatValue] longitude:[[locations objectAtIndex:2] floatValue]];
+    
     //init navi and push
+    ChooseWayViewController* chooseWay = [self.storyboard instantiateViewControllerWithIdentifier:@"ChooseWayVC"];
+    chooseWay.destLocation=dest;
+    chooseWay.garageLocation=garage;
+    
+    [self.navigationController pushViewController:chooseWay animated:YES];
 }
 
 /*

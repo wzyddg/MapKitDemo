@@ -252,6 +252,90 @@
             </objects>
             <point key="canvasLocation" x="1729" y="732"/>
         </scene>
+        <!--Choose Way View Controller-->
+        <scene sceneID="XPL-8T-05l">
+            <objects>
+                <viewController storyboardIdentifier="ChooseWayVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sT3-jG-v81" customClass="ChooseWayViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rKi-8j-Kic"/>
+                        <viewControllerLayoutGuide type="bottom" id="kkF-Z8-9x5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NeC-Iz-ede">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IhV-SY-mYQ">
+                                <rect key="frame" x="270" y="38" width="60" height="30"/>
+                                <state key="normal" title="行车导航"/>
+                                <connections>
+                                    <action selector="goToNavi:" destination="sT3-jG-v81" eventType="touchUpInside" id="GFJ-jI-Pg0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBv-ck-R8F">
+                                <rect key="frame" x="270" y="142" width="60" height="30"/>
+                                <state key="normal" title="步行导航"/>
+                                <connections>
+                                    <action selector="goToNavi:" destination="sT3-jG-v81" eventType="touchUpInside" id="I47-Ic-Shj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OBv-ck-R8F" firstAttribute="top" secondItem="IhV-SY-mYQ" secondAttribute="bottom" constant="30" id="Ace-Ya-BJs"/>
+                            <constraint firstItem="IhV-SY-mYQ" firstAttribute="top" secondItem="rKi-8j-Kic" secondAttribute="bottom" constant="30" id="MqC-cR-Y3a"/>
+                            <constraint firstItem="OBv-ck-R8F" firstAttribute="centerX" secondItem="NeC-Iz-ede" secondAttribute="centerX" id="mIf-cu-sik"/>
+                            <constraint firstItem="IhV-SY-mYQ" firstAttribute="centerX" secondItem="NeC-Iz-ede" secondAttribute="centerX" id="ue5-4q-0dQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="byCar" destination="IhV-SY-mYQ" id="ICQ-A7-6fu"/>
+                        <outlet property="onFoot" destination="OBv-ck-R8F" id="bn9-L7-jGh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hAI-Vc-HMx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2373" y="732"/>
+        </scene>
+        <!--Navi View Controller-->
+        <scene sceneID="PFb-eI-8t6">
+            <objects>
+                <viewController storyboardIdentifier="NaviVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wII-32-PFK" customClass="NaviViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Uwd-bg-rgY"/>
+                        <viewControllerLayoutGuide type="bottom" id="KBi-ke-SRT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0aI-MK-F3f">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXW-rq-pH8">
+                                <rect key="frame" x="51" y="44" width="31" height="30"/>
+                                <state key="normal" title="dest"/>
+                                <connections>
+                                    <action selector="d:" destination="wII-32-PFK" eventType="touchUpInside" id="Ag9-ub-Pjv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3o-yM-VMy">
+                                <rect key="frame" x="51" y="101" width="48" height="30"/>
+                                <state key="normal" title="garage"/>
+                                <connections>
+                                    <action selector="g:" destination="wII-32-PFK" eventType="touchUpInside" id="zAs-Gm-rbZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LXW-rq-pH8" firstAttribute="top" secondItem="Uwd-bg-rgY" secondAttribute="bottom" constant="30" id="BHS-Vy-vIw"/>
+                            <constraint firstItem="e3o-yM-VMy" firstAttribute="top" secondItem="LXW-rq-pH8" secondAttribute="bottom" constant="30" id="J65-ft-Yui"/>
+                            <constraint firstItem="e3o-yM-VMy" firstAttribute="leading" secondItem="LXW-rq-pH8" secondAttribute="leading" id="la1-uJ-8OV"/>
+                            <constraint firstItem="LXW-rq-pH8" firstAttribute="leading" secondItem="0aI-MK-F3f" secondAttribute="leadingMargin" constant="30" id="z1w-Hx-hJ5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Khh-N1-EA4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3018" y="732"/>
+        </scene>
         <!--好友位置-->
         <scene sceneID="Ydy-mU-VxH">
             <objects>

@@ -26,7 +26,7 @@
     }
 }
 
--(void)sendUserLocationWithUserID:(NSInteger)userID AndUserLocation:(MAUserLocation*)userLocation{
+-(void)sendUserLocationWithUserID:(NSInteger)userID AndUserLocation:(CLLocation*)userLocation{
     //send something to the server with AsyncSocket and then call back
     [self.delegate dealInfo:@"sendOK"];//this should be done in a call back
 }

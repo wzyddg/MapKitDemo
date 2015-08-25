@@ -18,7 +18,7 @@
 @property(nonatomic,weak) id<InfoDealDelegate> delegate;
 -(instancetype)initWithDelegate:(id<InfoDealDelegate>) delegate;
 -(void)loginWithUserName:(NSString*)userName andPassword:(NSString*)password;
--(void)sendUserLocationWithUserID:(NSInteger)userID AndUserLocation:(MAUserLocation*)userLocation;
+-(void)sendUserLocationWithUserID:(NSInteger)userID AndUserLocation:(CLLocation*)userLocation;
 -(void)getUserLocationWithUserName:(NSString*)userName;
 
 @end
