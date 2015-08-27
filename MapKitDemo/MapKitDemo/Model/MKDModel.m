@@ -42,4 +42,14 @@
 -(void)getFriendListWithUserID:(NSInteger)userID{
     [self.listDelegate getList:@"gyq,zth"];
 }
+
++(NSData*)encodeImage:(UIImage*)image{
+    NSData* imageData = UIImageJPEGRepresentation(image, 1.0);
+    return imageData;
+}
+
++(UIImage*)decodeImage:(NSData*)imageData{
+    UIImage* image= [UIImage imageWithData:imageData];
+    return image;
+}
 @end

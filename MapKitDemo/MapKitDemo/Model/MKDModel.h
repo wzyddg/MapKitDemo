@@ -27,4 +27,8 @@
 -(void)sendUserLocationWithUserID:(NSInteger)userID AndUserLocation:(CLLocation*)userLocation;
 -(void)getUserLocationWithUserName:(NSString*)userName;
 -(void)getFriendListWithUserID:(NSInteger)userID;
+
++(NSData*)encodeImage:(UIImage*)image;
++(UIImage*)decodeImage:(NSData*)imageData;
+
 @end

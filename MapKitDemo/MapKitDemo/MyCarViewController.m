@@ -54,7 +54,7 @@
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     
-    [[NSUserDefaults standardUserDefaults] setObject:chosenImage forKey:@"MKDCarImage"];
+    [[NSUserDefaults standardUserDefaults] setObject:[MKDModel encodeImage:chosenImage] forKey:@"MKDCarImage"];
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     [self reloadImage];
@@ -67,7 +67,7 @@
 }
 
 -(void)reloadImage{
-    UIImage *carImage = [[NSUserDefaults standardUserDefaults] objectForKey:@"MKDCarImage"];
+    UIImage *carImage = [MKDModel decodeImage:[[NSUserDefaults standardUserDefaults] objectForKey:@"MKDCarImage"]];
     self.imageView.image=carImage;
     if(carImage==nil){
         self.imageConditionLabel.text=@"暂无车辆";

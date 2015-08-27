@@ -11,6 +11,7 @@
 #import <AMapNaviKit/MAMapKit.h>
 #import <AMapNaviKit/AMapNaviKit.h>
 #import <AMapSearchKit/AMapSearchAPI.h>
+#import "MKDModel.h"
 
 #import "APIKey.h"
 

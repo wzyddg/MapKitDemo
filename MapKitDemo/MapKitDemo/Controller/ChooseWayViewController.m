@@ -226,7 +226,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    [[NSUserDefaults standardUserDefaults] setObject:chosenImage forKey:@"MKDCarImage"];
+    [[NSUserDefaults standardUserDefaults] setObject:[MKDModel encodeImage:chosenImage] forKey:@"MKDCarImage"];
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
 }
