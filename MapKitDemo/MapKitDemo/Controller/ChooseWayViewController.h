@@ -14,7 +14,7 @@
 
 #import "APIKey.h"
 
-@interface ChooseWayViewController : UIViewController<MAMapViewDelegate,AMapNaviManagerDelegate,AMapNaviViewControllerDelegate>
+@interface ChooseWayViewController : UIViewController<MAMapViewDelegate,AMapNaviManagerDelegate,AMapNaviViewControllerDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate,UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *byCar;
 @property (weak, nonatomic) IBOutlet UIButton *onFoot;
 

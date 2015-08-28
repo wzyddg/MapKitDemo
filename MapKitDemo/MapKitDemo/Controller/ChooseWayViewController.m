@@ -106,8 +106,11 @@
 
 - (void)naviManager:(AMapNaviManager *)naviManager didDismissNaviViewController:(UIViewController *)naviViewController
 {
-    NSLog(@"didDismissNaviViewController");
-    
+    if(naviType==0){
+        //take a photo of car
+        UIAlertView* uiav = [[UIAlertView alloc]initWithTitle:@"到达车库" message:@"已经到达车库，是否要为您的车拍照便于找车？" delegate:self cancelButtonTitle:@"去拍照" otherButtonTitles:@"不必了", nil];
+        [uiav show];
+    }
 }
 
 - (void)naviManagerOnCalculateRouteSuccess:(AMapNaviManager *)naviManager
@@ -137,20 +140,17 @@
     NSLog(@"didStartNavi");
 }
 
-//emu navi over
-- (void)naviManagerDidEndEmulatorNavi:(AMapNaviManager *)naviManager
-{
-    NSLog(@"DidEndEmulatorNavi");
-    [self.naviManager dismissNaviViewControllerAnimated:YES];
-}
-
 //real navi over
 - (void)naviManagerOnArrivedDestination:(AMapNaviManager *)naviManager
 {
     NSLog(@"到啦哈哈哈");
+    [self.naviManager stopNavi];
     [self.naviManager dismissNaviViewControllerAnimated:YES];
-    if(naviType==0){
-        [[NSUserDefaults standardUserDefaults] setObject:self.garageLocation forKey:@"MKDUserCarLocation"];
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex==0) {
+        [self takePhoto];
     }
 }
 
@@ -210,6 +210,29 @@
 - (void)naviViewControllerTurnIndicatorViewTapped:(AMapNaviViewController *)naviViewController
 {
 //    [self.naviManager readNaviInfoManual];
+}
+
+#pragma mark - Take Picture
+- (void)takePhoto {
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    [[NSUserDefaults standardUserDefaults] setObject:chosenImage forKey:@"MKDCarImage"];
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 
 @end

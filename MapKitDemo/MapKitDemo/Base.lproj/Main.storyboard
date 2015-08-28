@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GXq-HK-uci">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GXq-HK-uci">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -335,7 +335,7 @@
         <!--我的车辆-->
         <scene sceneID="bRR-Va-fYW">
             <objects>
-                <viewController id="OC2-eK-eoa" sceneMemberID="viewController">
+                <viewController id="OC2-eK-eoa" customClass="MyCarViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GP4-60-j9h"/>
                         <viewControllerLayoutGuide type="bottom" id="tqo-ri-cbb"/>
@@ -343,9 +343,56 @@
                     <view key="view" contentMode="scaleToFill" id="CaC-2S-xhe">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F05-zv-wFH">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8E-Cb-bSN">
+                                <rect key="frame" x="122" y="478" width="66" height="30"/>
+                                <state key="normal" title="拍照/重拍">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takeImage:" destination="OC2-eK-eoa" eventType="touchUpInside" id="ocG-Fo-GKv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暂无车辆" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mn2-cd-WYH">
+                                <rect key="frame" x="273" y="289" width="68" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPS-uZ-3n8">
+                                <rect key="frame" x="417" y="478" width="60" height="30"/>
+                                <state key="normal" title="删除图片">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteImage:" destination="OC2-eK-eoa" eventType="touchUpInside" id="Hl2-iR-eZG"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Mn2-cd-WYH" secondAttribute="centerX" constant="-7" id="EKk-2k-kgA"/>
+                            <constraint firstItem="W8E-Cb-bSN" firstAttribute="top" secondItem="rPS-uZ-3n8" secondAttribute="top" id="PbT-7f-cIz"/>
+                            <constraint firstItem="F05-zv-wFH" firstAttribute="top" secondItem="GP4-60-j9h" secondAttribute="bottom" constant="-64" id="Y45-b8-KDs"/>
+                            <constraint firstItem="F05-zv-wFH" firstAttribute="leading" secondItem="CaC-2S-xhe" secondAttribute="leadingMargin" constant="-16" id="ZPf-fR-nH7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rPS-uZ-3n8" secondAttribute="trailing" constant="60" id="Zdi-ja-Qs2"/>
+                            <constraint firstItem="tqo-ri-cbb" firstAttribute="top" secondItem="W8E-Cb-bSN" secondAttribute="bottom" constant="30" id="aBg-2z-rbJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="F05-zv-wFH" secondAttribute="trailing" constant="-16" id="ixb-16-s3f"/>
+                            <constraint firstAttribute="centerY" secondItem="Mn2-cd-WYH" secondAttribute="centerY" constant="0.5" id="nKD-hj-KoP"/>
+                            <constraint firstItem="tqo-ri-cbb" firstAttribute="top" secondItem="F05-zv-wFH" secondAttribute="bottom" constant="-49" id="uke-f9-zln"/>
+                            <constraint firstItem="W8E-Cb-bSN" firstAttribute="leading" secondItem="CaC-2S-xhe" secondAttribute="leadingMargin" constant="60" id="zXm-ex-gDQ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="我的车辆" id="iVK-i5-sbz"/>
+                    <connections>
+                        <outlet property="deleteImageButton" destination="rPS-uZ-3n8" id="m7L-i3-VGf"/>
+                        <outlet property="imageConditionLabel" destination="Mn2-cd-WYH" id="t45-uq-Ruz"/>
+                        <outlet property="imageView" destination="F05-zv-wFH" id="isT-0t-HyT"/>
+                        <outlet property="takeImageButton" destination="W8E-Cb-bSN" id="Lqt-QQ-xRX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="shg-Iw-Vkm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
