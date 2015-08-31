@@ -12,7 +12,7 @@
 		55D1DB261B739E2D00BC8521 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D1DB251B739E2D00BC8521 /* AppDelegate.m */; };
 		55D1DB2C1B739E2D00BC8521 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55D1DB2A1B739E2D00BC8521 /* Main.storyboard */; };
 		55D1DB2E1B739E2D00BC8521 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55D1DB2D1B739E2D00BC8521 /* Assets.xcassets */; };
-		8777BB191B90337800B0E63D /* MyCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8777BB181B90337800B0E63D /* MyCarViewController.m */; };
+		55D4DB9A1B949AFB00B6CD52 /* MyCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D4DB991B949AFB00B6CD52 /* MyCarViewController.m */; };
 		8786AB4E1B8BF4180002FE64 /* ChooseWayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8786AB451B8BF4180002FE64 /* ChooseWayViewController.m */; };
 		8786AB4F1B8BF4180002FE64 /* ContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8786AB471B8BF4180002FE64 /* ContactTableViewController.m */; };
 		8786AB501B8BF4180002FE64 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8786AB491B8BF4180002FE64 /* LoginViewController.m */; };
@@ -30,10 +30,10 @@
 		55D1DB2B1B739E2D00BC8521 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55D1DB2D1B739E2D00BC8521 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55D1DB321B739E2D00BC8521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55D4DB981B949AFB00B6CD52 /* MyCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCarViewController.h; path = MapKitDemo/Controller/MyCarViewController.h; sourceTree = "<group>"; };
+		55D4DB991B949AFB00B6CD52 /* MyCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyCarViewController.m; path = MapKitDemo/Controller/MyCarViewController.m; sourceTree = "<group>"; };
 		71A75DC8E7D22F795644B255 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7ADF5920A2530AC85C7FED86 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		8777BB171B90337800B0E63D /* MyCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCarViewController.h; path = MapKitDemo/MyCarViewController.h; sourceTree = "<group>"; };
-		8777BB181B90337800B0E63D /* MyCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyCarViewController.m; path = MapKitDemo/MyCarViewController.m; sourceTree = "<group>"; };
 		8786AB441B8BF4180002FE64 /* ChooseWayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooseWayViewController.h; path = MapKitDemo/Controller/ChooseWayViewController.h; sourceTree = "<group>"; };
 		8786AB451B8BF4180002FE64 /* ChooseWayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooseWayViewController.m; path = MapKitDemo/Controller/ChooseWayViewController.m; sourceTree = "<group>"; };
 		8786AB461B8BF4180002FE64 /* ContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactTableViewController.h; path = MapKitDemo/Controller/ContactTableViewController.h; sourceTree = "<group>"; };
@@ -73,6 +73,8 @@
 			children = (
 				8786AB441B8BF4180002FE64 /* ChooseWayViewController.h */,
 				8786AB451B8BF4180002FE64 /* ChooseWayViewController.m */,
+				55D4DB981B949AFB00B6CD52 /* MyCarViewController.h */,
+				55D4DB991B949AFB00B6CD52 /* MyCarViewController.m */,
 				8786AB461B8BF4180002FE64 /* ContactTableViewController.h */,
 				8786AB471B8BF4180002FE64 /* ContactTableViewController.m */,
 				8786AB481B8BF4180002FE64 /* LoginViewController.h */,
@@ -81,8 +83,6 @@
 				8786AB4B1B8BF4180002FE64 /* MyPosViewController.m */,
 				8786AB4C1B8BF4180002FE64 /* UserStatusViewController.h */,
 				8786AB4D1B8BF4180002FE64 /* UserStatusViewController.m */,
-				8777BB171B90337800B0E63D /* MyCarViewController.h */,
-				8777BB181B90337800B0E63D /* MyCarViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -269,7 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8777BB191B90337800B0E63D /* MyCarViewController.m in Sources */,
+				55D4DB9A1B949AFB00B6CD52 /* MyCarViewController.m in Sources */,
 				55D1DB261B739E2D00BC8521 /* AppDelegate.m in Sources */,
 				55D1DB231B739E2D00BC8521 /* main.m in Sources */,
 				8786AB4E1B8BF4180002FE64 /* ChooseWayViewController.m in Sources */,
